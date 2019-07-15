@@ -49,7 +49,7 @@
         <!--Add New Photo!-->
         <scene sceneID="X40-zc-ahK">
             <objects>
-                <viewController id="Tuo-2d-ycc" sceneMemberID="viewController">
+                <viewController id="Tuo-2d-ycc" customClass="AddPhotoViewController" customModule="viewFinder2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dqY-sP-RvZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,17 +74,26 @@
                                 <rect key="frame" x="58" y="601" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="Tuo-2d-ycc" eventType="touchUpInside" id="MUG-qO-gez"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UK-1v-UXa">
                                 <rect key="frame" x="301" y="601" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="albumsTapped:" destination="Tuo-2d-ycc" eventType="touchUpInside" id="tFY-Yc-LRj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zqh-pl-ZjK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo!" id="yKD-lI-qaw"/>
+                    <connections>
+                        <outlet property="imageView" destination="e0I-Ui-iwj" id="joj-zc-9aj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozj-mo-gKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
