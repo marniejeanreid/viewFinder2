@@ -13,7 +13,7 @@
         <!--ViewFinder2-->
         <scene sceneID="HEH-ra-kKu">
             <objects>
-                <tableViewController id="y8w-mP-CCV" sceneMemberID="viewController">
+                <tableViewController id="y8w-mP-CCV" customClass="PhotoTableViewController" customModule="viewFinder2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hu9-6h-oSV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stock-vector-vintage-photo-camera-icon-retro-concept-515136724" translatesAutoresizingMaskIntoConstraints="NO" id="e0I-Ui-iwj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="e0I-Ui-iwj">
                                 <rect key="frame" x="62" y="129" width="291" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -69,6 +69,9 @@
                                 <rect key="frame" x="188" y="518" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save!"/>
+                                <connections>
+                                    <action selector="savePhotoTapped:" destination="Tuo-2d-ycc" eventType="touchUpInside" id="PH0-3F-86p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-pw-b3q">
                                 <rect key="frame" x="58" y="601" width="54" height="30"/>
@@ -92,6 +95,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo!" id="yKD-lI-qaw"/>
                     <connections>
+                        <outlet property="captionText" destination="6SC-mz-hnx" id="zUU-kr-4s5"/>
                         <outlet property="imageView" destination="e0I-Ui-iwj" id="joj-zc-9aj"/>
                     </connections>
                 </viewController>
@@ -119,6 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="stock-vector-vintage-photo-camera-icon-retro-concept-515136724" width="450" height="470"/>
+        <image name="image" width="450" height="470"/>
     </resources>
 </document>
